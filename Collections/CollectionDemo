@@ -1,0 +1,151 @@
+package pack.CollectionDemo;
+
+import java.util.*;
+
+public class CollectionDemo {
+
+    enum Day {
+        MONDAY, TUESDAY, WEDNESDAY
+    }
+
+    public static void main(String[] args) {
+
+        // ==========================================
+        // 1. ARRAYLIST
+        // ==========================================
+
+        ArrayList<String> arrayList = new ArrayList<>();
+
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        arrayList.add("Apple");
+
+        System.out.println("ArrayList: " + arrayList);
+        System.out.println("Element at index 1: " + arrayList.get(1));
+
+
+        // ==========================================
+        // 2. LINKEDLIST
+        // ==========================================
+
+        LinkedList<String> linkedList = new LinkedList<>();
+
+        linkedList.add("A");
+        linkedList.add("B");
+        linkedList.addFirst("Start");
+        linkedList.addLast("End");
+
+        System.out.println("\nLinkedList: " + linkedList);
+        System.out.println("First element: " + linkedList.getFirst());
+
+
+        // ==========================================
+        // 3. HASHSET
+        // ==========================================
+
+        HashSet<String> hashSet = new HashSet<>();
+
+        hashSet.add("Apple");
+        hashSet.add("Banana");
+        hashSet.add("Apple");     // Duplicate ignored
+
+        System.out.println("\nHashSet: " + hashSet);
+
+
+        // ==========================================
+        // 4. TREESET
+        // ==========================================
+
+        TreeSet<Integer> treeSet = new TreeSet<>();
+
+        treeSet.add(50);
+        treeSet.add(10);
+        treeSet.add(30);
+        treeSet.add(20);
+
+        System.out.println("\nTreeSet: " + treeSet);
+
+
+        // ==========================================
+        // 5. PRIORITYQUEUE
+        // ==========================================
+
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+
+        priorityQueue.add(30);
+        priorityQueue.add(10);
+        priorityQueue.add(20);
+
+        System.out.println("\nPriorityQueue: " + priorityQueue);
+        System.out.println("Removed: " + priorityQueue.poll());
+
+
+        // ==========================================
+        // 6. ARRAYDEQUE
+        // ==========================================
+
+        ArrayDeque<String> deque = new ArrayDeque<>();
+
+        deque.add("B");
+        deque.addFirst("A");
+        deque.addLast("C");
+
+        System.out.println("\nArrayDeque: " + deque);
+
+        System.out.println("Removed from front: " + deque.removeFirst());
+        System.out.println("Removed from back: " + deque.removeLast());
+
+
+        // ==========================================
+        // 7. HASHMAP
+        // ==========================================
+
+        HashMap<Integer, String> hashMap = new HashMap<>();
+
+        hashMap.put(1, "Apple");
+        hashMap.put(2, "Banana");
+        hashMap.put(3, "Mango");
+
+        System.out.println("\nHashMap: " + hashMap);
+        System.out.println("Value of key 2: " + hashMap.get(2));
+
+
+        // ==========================================
+        // 8. TREEMAP
+        // ==========================================
+
+        TreeMap<Integer, String> treeMap = new TreeMap<>();
+
+        treeMap.put(30, "C");
+        treeMap.put(10, "A");
+        treeMap.put(20, "B");
+
+        System.out.println("\nTreeMap: " + treeMap);
+
+
+        // ==========================================
+        // 9. ENUMMAP
+        // ==========================================
+
+        EnumMap<Day, String> enumMap = new EnumMap<>(Day.class);
+
+        enumMap.put(Day.MONDAY, "Java");
+        enumMap.put(Day.TUESDAY, "Python");
+        enumMap.put(Day.WEDNESDAY, "C++");
+
+        System.out.println("\nEnumMap: " + enumMap);
+
+
+        // ==========================================
+        // 10. CONCURRENT HASHMAP
+        // ==========================================
+
+        java.util.concurrent.ConcurrentHashMap<Integer, String> concurrentMap
+                = new java.util.concurrent.ConcurrentHashMap<>();
+
+        concurrentMap.put(1, "One");
+        concurrentMap.put(2, "Two");
+
+        System.out.println("\nConcurrentHashMap: " + concurrentMap);
+    }
+}
